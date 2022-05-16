@@ -94,8 +94,7 @@ img {
   margin-left: auto;
   padding-left: 0;
 }
-.contact-item {
-}
+
 .contact-item + .contact-item {
   margin-left: 50px;
 }
@@ -122,6 +121,11 @@ img {
 .contact-link:active {
   color: var(--accent-color);
 }
+.contact-link:hover .contact-icon,
+.contact-link:focus .contact-icon {
+  fill: var(--accent-color);
+}
+
 /* Hero */
 .hero {
   background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
@@ -195,6 +199,16 @@ img {
   padding-right: 15px;
   margin-left: auto;
   margin-right: auto;
+}
+.thumb {
+  display: block;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  padding-left: 100px;
+  padding-right: 100px;
+  margin-bottom: 30px;
+  background-color: var(--background-gray);
+  border-radius: 4px;
 }
 
 .benefits-title.visually-hidden {
@@ -358,8 +372,6 @@ img {
   align-items: center;
   gap: 10px;
 }
-.social-item {
-}
 .social-link {
   display: flex;
   align-items: center;
@@ -393,6 +405,7 @@ img {
 }
 .clients-title {
   margin: 0;
+  margin-bottom: 50px;
   font-style: normal;
   font-weight: 700;
   font-size: 36px;
@@ -407,6 +420,31 @@ img {
   margin-top: 0;
   margin-bottom: 0;
   padding-left: 0;
+  flex-basis: calc(100%);
+  margin-right: -15px;
+  /* margin-left: -15px; */
+}
+.clients-item {
+}
+.clients-item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.clients-link {
+  display: flex;
+  padding-top: 16px;
+  padding-right: 32px;
+  padding-bottom: 16px;
+  padding-left: 32px;
+
+  border: 1px solid var(--grey-icon-color);
+  border-radius: 4px;
+  fill: var(--grey-icon-color);
+}
+.clients-link:hover,
+.clients-link:focus {
+  fill: var(--accent-color);
+  border-color: var(--accent-color);
 }
 
 /* Footer */
@@ -469,12 +507,38 @@ img {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--white-text-color);
+  margin-bottom: 20px;
 }
-.join-list {
-  margin-top: 20px;
+
+.socials-list-footer {
+  list-style: none;
+  display: flex;
+  margin-top: 0;
   margin-bottom: 0;
   padding-left: 0;
-  list-style: none;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.social-link-footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+.social-icon-footer {
+  fill: var(--white-text-color);
+}
+.social-link-footer:hover,
+.social-link-footer:focus {
+  background-color: var(--accent-color);
+}
+.social-link-footer:hover .social-icon-footer,
+.social-link-footer:focus .social-icon-footer {
+  fill: var(--white-text-color);
 }
 
 /* Portfolio */
