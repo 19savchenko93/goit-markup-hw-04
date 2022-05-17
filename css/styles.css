@@ -77,7 +77,8 @@ img {
   padding-bottom: 32px;
 }
 .navigation-link:hover,
-.navigation-link:focus .navigation-link:active {
+.navigation-link:focus,
+.navigation-link:active {
   color: var(--accent-color);
 }
 .navigation-link.current {
